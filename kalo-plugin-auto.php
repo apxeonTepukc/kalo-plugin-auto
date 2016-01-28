@@ -9,10 +9,18 @@ Author URI: http://harabejkov.info/
 */
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
-require_once( 'BFIGitHubPluginUploader.php' );
+/*require_once( 'BFIGitHubPluginUploader.php' );
 if ( is_admin() ) {
-    new WPFDGitHubPluginUpdater( __FILE__, 'apxeonTepukc', "kalo-plugin-auto" );
-}
+    $instance = new WPFDGitHubPluginUpdater( __FILE__, 'apxeonTepukc', "kalo-plugin-auto" );
+}*/
+
+require 'plugin-update-checker/plugin-update-checker.php';
+$className = PucFactory::getLatestClassVersion('PucGitHubChecker');
+$myUpdateChecker = new $className(
+    'https://github.com/apxeonTepukc/kalo-plugin-auto/',
+    __FILE__,
+    'master'
+);
 
 /* The plugin itself */
 if (!is_admin()) {
