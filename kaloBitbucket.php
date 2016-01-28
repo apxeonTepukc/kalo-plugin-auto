@@ -11,13 +11,9 @@ Author URI: http://harabejkov.info/
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 require_once( 'BFIGitHubPluginUploader.php' );
 if ( is_admin() ) {
-
-    add_action( 'admin_init', 'myprefixHandleUpdates' );
-
-    function myprefixHandleUpdates() {
-        $instance = new WPFDGitHubPluginUpdater( __FILE__, 'apxeonTepukc', "kalo-plugin-auto" );
-    }
+    new WPFDGitHubPluginUpdater( __FILE__, 'apxeonTepukc', "kalo-plugin-auto" );
 }
+
 /* The plugin itself */
 if (!is_admin()) {
     add_action('init','helloKalo');
