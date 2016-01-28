@@ -16,5 +16,5 @@ function helloKalo() {
 
 require_once( 'BFIGitHubPluginUploader.php' );
 if ( is_admin() ) {
-    new BFIGitHubPluginUpdater( __FILE__, 'apxeonTepukc', "kalo-plugin-auto" );
+    new WPFDGitHubPluginUpdater( __FILE__, 'apxeonTepukc', "kalo-plugin-auto" );
 }
