@@ -3,7 +3,7 @@
 Plugin Name: Kalo test plugin
 Plugin URI: http://harabejkov.info/
 Description: A simple test plugin for bitbucket update
-Version: 1.2
+Version: 1.3
 Author: Harabejkov
 Author URI: http://harabejkov.info/
 */
@@ -28,5 +28,5 @@ if (!is_admin()) {
 }
 
 function helloKalo() {
-    echo '<span style="color: darkred;">Hello master Kalo, may the force be with you, because you just updated the plugin!</span>';
+    echo '<span style="color: darkred;">Hello master Kalo, may the force be with you, because you just updated the plugin to 1.3!</span>';
 }
