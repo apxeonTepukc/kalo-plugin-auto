@@ -25,7 +25,7 @@ class WPFDGitHubPluginUpdater {
      * @param  string $gitHubUsername
      * @param  string $gitHubProjectName
      * @param  string $accessToken
-     * @return nulla
+     * @return null
      */
     function __construct( $pluginFile, $gitHubUsername, $gitHubProjectName, $accessToken = '' )
     {
