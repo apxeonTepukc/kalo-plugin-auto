@@ -45,10 +45,8 @@ class WPFDGitHubPluginUpdater {
      *
      * @return null
      */
-    private function initPluginData()
-    {
+    private function initPluginData() {
         $this->slug = plugin_basename( $this->pluginFile );
-
         $this->pluginData = get_plugin_data( $this->pluginFile );
     }
 
@@ -84,6 +82,10 @@ class WPFDGitHubPluginUpdater {
         if ( is_array( $this->githubAPIResult ) )
         {
             $this->githubAPIResult = $this->githubAPIResult[0];
+
+            echo "<pre>";
+            print_r($this->githubAPIResult);
+            echo "</pre>";
         }
     }
 
