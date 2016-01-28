@@ -82,10 +82,6 @@ class WPFDGitHubPluginUpdater {
         if ( is_array( $this->githubAPIResult ) )
         {
             $this->githubAPIResult = $this->githubAPIResult[0];
-
-            echo "<pre>";
-            print_r($this->githubAPIResult);
-            echo "</pre>";
         }
     }
 
