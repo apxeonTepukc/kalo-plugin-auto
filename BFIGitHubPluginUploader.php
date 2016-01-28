@@ -1,25 +1,34 @@
 <?php
 
 class WPFDGitHubPluginUpdater {
+
     private $slug;
+
     private $pluginData;
+
     private $username;
+
     private $repo;
+
     private $pluginFile;
+
     private $githubAPIResult;
+
     private $accessToken;
+
     private $pluginActivated;
 
-/**
- * Class constructor.
- *
- * @param  string $pluginFile
- * @param  string $gitHubUsername
- * @param  string $gitHubProjectName
- * @param  string $accessToken
- */
-
-    function __construct( $pluginFile, $gitHubUsername, $gitHubProjectName, $accessToken = '' ) {
+    /**
+     * Class constructor.
+     *
+     * @param  string $pluginFile
+     * @param  string $gitHubUsername
+     * @param  string $gitHubProjectName
+     * @param  string $accessToken
+     * @return null
+     */
+    function __construct( $pluginFile, $gitHubUsername, $gitHubProjectName, $accessToken = '' )
+    {
         add_filter( "pre_set_site_transient_update_plugins", array( $this, "setTransitent" ) );
         add_filter( "plugins_api", array( $this, "setPluginInfo" ), 10, 3 );
         add_filter( "upgrader_pre_install", array( $this, "preInstall" ), 10, 3 );
