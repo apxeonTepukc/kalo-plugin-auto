@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Kalo test plugin
-Plugin URI: http://harabejkob.info/
+Plugin URI: http://harabejkov.info/
 Description: A simple test plugin for bitbucket update
 Version: 1.1
-Author: Harabejkob
-Author URI: http://harabejkob.info/
+Author: Harabejkov
+Author URI: http://harabejkov.info/
 */
 
 add_action('init','helloKalo');
