@@ -3,7 +3,7 @@
 Plugin Name: Kalo test plugin
 Plugin URI: http://kaloyanhlebarov.info/
 Description: A simple test plugin for bitbucket update
-Version: 1.0
+Version: 1.1
 Author: Kaloyan Hlebarov
 Author URI: http://kaloyanhlebarov.info/
 */
